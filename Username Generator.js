@@ -1,15 +1,19 @@
 cfg.Dark
+cfg.MUI
 // Setting up the layout of the app
 function OnStart()
 {
-
+var rr =( "allo");
+app.EnableBackKey( false  )
+color = MUI.colors.lime
     lay = app.CreateLayout( "linear", "Vertical,FillXY" );
-    btnGenerate = app.CreateButton( "Generate Username", 0.3, 0.1);
+    btnGenerate = MUI.CreateButtonElegant(  "Generate Username", 0.3, 0.1, MUI.colors.purple.purple);
     txt = app.CreateText( "", 0.8, 0.1 );
     lay.AddChild( btnGenerate );
     lay.AddChild( txt );
     app.AddLayout( lay );
     btnGenerate.SetOnTouch( GenerateUsername );
+    btnGenerate.SetOnLongTouch( Ok );
 }
 
 // The GenerateUsername function
@@ -29,4 +33,12 @@ function GenerateUsername()
     var username = adj + noun + randomNumber;
     txt.SetText( username );
     app.SetClipboardText( username )
+}
+
+function Ok()
+{
+	app.Alert( "apop" )
+	var text = "This is a sample text for the popup."
+   alr = MUI.CreateAlert(text)
+   alr.Show()
 }
