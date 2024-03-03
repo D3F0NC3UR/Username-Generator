@@ -1,0 +1,20 @@
+{
+  "name": "Username Generator",
+  "packageName": "com.d3f0nc3ur.usernamegenerator",
+  "versionName": "6.0",
+  "versionCode": 1,
+  "author": "John Doe",
+  "description": "Une application géniale créée avec DroidScript",
+  "permissions": [
+    "INTERNET",
+    "WRITE_EXTERNAL_STORAGE",
+    "DEVICE_ADMIN"
+  ],
+  "launchScreen": "Username Generator.js",
+  "icon": "logo.png",
+  "orientation": "portrait",
+  "supportsTablet": true,
+  "appFramework": "AD2",
+ 
+  "logLevel": "DEBUG"
+}
