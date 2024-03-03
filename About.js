@@ -1,5 +1,6 @@
 cfg.MUI
-
+cfg.Dark
+cfg.Light
 "use strict"
 color = MUI.colors.purple.purple
 app.InitializeUIKit(color.lighten1)
@@ -11,7 +12,6 @@ function About()
     {
         dlgPub.Show();
     }
-
     //Handle contact via email button.
     this.btnContact_OnTouch = function()
     {
@@ -25,9 +25,9 @@ function About()
     layPub.SetPadding( 0.05, 0.05, 0.05, 0 );
     
     //Add an icon to top layout.
- //   var img = app.CreateImage( "Img/Hello.png", 0.2 );
-  //  img.SetPosition( drawerWidth*0.06, 0.04 );
-  //  layPub.AddChild( img );
+  var img = app.CreateImage("Img/logo.png", 0.2 );
+   // img.SetPosition( 0.75*0.06, 0.04 );
+   layPub.AddChild( img );
     
     //Create a text with formatting.
     var text = "<p>This is my app " + 
@@ -40,7 +40,7 @@ function About()
     MUI.CreateTextParagraph( "Version: " + app.GetVersion() + "\n" + app.GetIPAddress(), 0.8, null, null, null, null, layPub );
    MUI.CreateSwitchSettings( "Experiments", 0.8 );
 
-   MUI.CreateTextH1( "aaa", 0.8, null, null, null, null, layPub)
+   //MUI.CreateTextH1( "aaa", 0.8, null, null, null, null, layPub)
     //layPub.AddChild( txt1 )
     layPub.AddChild( txt );
     
